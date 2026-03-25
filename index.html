@@ -7,7 +7,9 @@
     <title>zeal portfolio</title>
 </head>
 <body class="bg-white">
-   <nav class="bg-[#070202] text-white relative">
+
+<!-- Navbar -->
+<nav class="bg-[#070202] text-white relative">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
     <!-- Logo -->
@@ -17,117 +19,132 @@
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <!-- HOME -->
       <li class="relative group cursor-pointer">
         HOME ▾
-        <!-- Desktop Dropdown -->
-        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px]">
+        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
           <li class="px-4 py-2 hover:bg-gray-100">Submenu 1</li>
           <li class="px-4 py-2 hover:bg-gray-100">Submenu 2</li>
         </ul>
       </li>
+      <!-- LISTING -->
       <li class="relative group cursor-pointer">
         LISTING ▾
-        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px]">
+        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
           <li class="px-4 py-2 hover:bg-gray-100">Submenu A</li>
           <li class="px-4 py-2 hover:bg-gray-100">Submenu B</li>
         </ul>
       </li>
+      <!-- SERVICES -->
+      <li class="relative group cursor-pointer">
+        SERVICES ▾
+        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
+          <li class="px-4 py-2 hover:bg-gray-100">Service 1</li>
+          <li class="px-4 py-2 hover:bg-gray-100">Service 2</li>
+          <li class="px-4 py-2 hover:bg-gray-100">Service 3</li>
+        </ul>
+      </li>
+      <!-- Other Links -->
       <li class="hover:opacity-80 cursor-pointer">PROPERTY ▾</li>
       <li class="hover:opacity-80 cursor-pointer">PAGES ▾</li>
       <li class="flex items-center gap-2 cursor-pointer">
-        ELEMENTOR
-        <span class="bg-[#ffc700] text-xs px-2 py-0.5 rounded">NEW</span>
+        ELEMENTOR <span class="bg-[#ffc700] text-xs px-2 py-0.5 rounded">NEW</span>
       </li>
       <li class="hover:opacity-80 cursor-pointer">SEARCHES ▾</li>
     </ul>
 
-    <!-- Right side -->
+    <!-- Right Side -->
     <div class="flex items-center gap-4">
-      <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc700] bg-white">
-        👤
-      </div>
+      <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc700] bg-white">👤</div>
       <button class="hidden md:block border border-[#ffc700] px-4 py-2 rounded-md text-sm hover:bg-[#ffc700] hover:text-slate-600 transition">
         CREATE A LISTING
       </button>
 
-      <!-- Mobile Toggle -->
+      <!-- Mobile Menu Toggle -->
       <div class="md:hidden">
         <input type="checkbox" id="menu-toggle" class="hidden peer">
-        <label for="menu-toggle" class="text-2xl cursor-pointer">☰</label>
+        <label for="menu-toggle" class="text-2xl cursor-pointer select-none">☰</label>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Dropdown -->
+  <!-- Mobile Menu -->
   <div class="md:hidden hidden peer-checked:block bg-white text-gray-800 px-6 py-4 space-y-2 shadow-lg">
-    <!-- HOME Mobile Dropdown -->
+
+    <!-- Reusable Mobile Dropdown -->
     <div class="flex flex-col">
-      <input type="checkbox" id="home-toggle" class="hidden peer">
-      <label for="home-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
-        HOME ▾
-        <span class="peer-checked:rotate-180 transition-transform">▾</span>
+      <input type="checkbox" id="mobile-home-toggle" class="hidden peer">
+      <label for="mobile-home-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
+        HOME ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
       </label>
-      <ul class="hidden peer-checked:flex flex-col bg-green-50 rounded-md mt-1">
+      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
         <li class="px-4 py-2 hover:bg-green-100">Submenu 1</li>
         <li class="px-4 py-2 hover:bg-green-100">Submenu 2</li>
       </ul>
     </div>
 
-    <!-- LISTING Mobile Dropdown -->
     <div class="flex flex-col">
-      <input type="checkbox" id="listing-toggle" class="hidden peer">
-      <label for="listing-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
-        LISTING ▾
-        <span class="peer-checked:rotate-180 transition-transform">▾</span>
+      <input type="checkbox" id="mobile-listing-toggle" class="hidden peer">
+      <label for="mobile-listing-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
+        LISTING ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
       </label>
-      <ul class="hidden peer-checked:flex flex-col bg-green-50 rounded-md mt-1">
+      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
         <li class="px-4 py-2 hover:bg-green-100">Submenu A</li>
         <li class="px-4 py-2 hover:bg-green-100">Submenu B</li>
       </ul>
     </div>
 
-    <!-- Other items -->
+    <div class="flex flex-col">
+      <input type="checkbox" id="mobile-services-toggle" class="hidden peer">
+      <label for="mobile-services-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
+        SERVICES ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
+      </label>
+      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
+        <li class="px-4 py-2 hover:bg-green-100">Service 1</li>
+        <li class="px-4 py-2 hover:bg-green-100">Service 2</li>
+        <li class="px-4 py-2 hover:bg-green-100">Service 3</li>
+      </ul>
+    </div>
+
+    <!-- Other Mobile Links -->
     <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PROPERTY</a>
     <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PAGES</a>
     <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">
       ELEMENTOR <span class="ml-2 text-xs bg-green-500 text-white px-2 py-0.5 rounded">NEW</span>
     </a>
     <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">SEARCHES</a>
+
   </div>
 </nav>
-  <section class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
 
-      <!-- LEFT (TEXT) -->
-      <div class="flex-1 text-center md:text-left mt-0">
-        <p class="text-[#ffc700] font-medium mb-3 text-2xl">Welcome To Zeal Homes</p>
+<!-- Hero Section -->
+<section class="bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
 
-        <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4 max-w-xl mx-auto md:mx-0">
-          Packed with new features and improvements
-        </h1>
-
-        <p class="text-gray-500 mb-6 text-2xl">
-           it is the biggest all-in-one solution for real estate companies and professionals
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <button class="bg-[#ffc700] text-white px-6 py-3 rounded-md hover:bg-[#fae69c] transition w-full sm:w-auto">
-            Join Us
-          </button>
-
-          <button class="border border-[#070202] text-[#ffc700] px-6 py-3 rounded-md hover:bg-bg-[#fae69c] transition w-full sm:w-auto">
-            Learn More
-          </button>
-        </div>
+    <!-- LEFT (TEXT) -->
+    <div class="flex-1 text-center md:text-left mt-0">
+      <p class="text-[#ffc700] font-medium mb-3 text-2xl">Welcome To Zeal Homes</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4 max-w-xl mx-auto md:mx-0">
+        Packed with new features and improvements
+      </h1>
+      <p class="text-gray-500 mb-6 text-2xl">
+        It is the biggest all-in-one solution for real estate companies and professionals
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <button class="bg-[#ffc700] text-white px-6 py-3 rounded-md hover:bg-[#fae69c] transition w-full sm:w-auto">
+          Join Us
+        </button>
+        <button class="border border-[#070202] text-[#ffc700] px-6 py-3 rounded-md hover:bg-[#fae69c] transition w-full sm:w-auto">
+          Learn More
+        </button>
       </div>
-
-      <!-- RIGHT (IMAGE) -->
-      <div class="flex-1 flex justify-center md:justify-end bg-transparent mt-25">
-        <img src="images/banner.png" alt="Hero Image"
-             class="w-full max-w-md md:max-w-lg object-contain">
-      </div>
-
     </div>
-  </section>
+
+    <!-- RIGHT (IMAGE) -->
+    <div class="flex-1 flex justify-center md:justify-end">
+      <img src="images/banner.png" alt="Hero Image" class="w-full max-w-md md:max-w-lg object-contain">
+    </div>
+  </div>
+</section>
 </body>
 </html>

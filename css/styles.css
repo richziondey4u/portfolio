@@ -220,6 +220,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .z-10 {
+    z-index: 10;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -231,9 +234,6 @@
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
-  }
-  .mt-25 {
-    margin-top: calc(var(--spacing) * 25);
   }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
@@ -354,9 +354,6 @@
   .bg-green-500 {
     background-color: var(--color-green-500);
   }
-  .bg-transparent {
-    background-color: transparent;
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -446,6 +443,10 @@
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
   }
   .group-hover\:block {
     &:is(:where(.group):hover *) {
