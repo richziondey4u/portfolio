@@ -4,63 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>zeal portfolio</title>
 </head>
 <body class="bg-white">
-  <nav class="bg-[#070202] text-white">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+   <nav class="bg-[#070202] text-white relative">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="images/zeal.png" alt="ZEAL Logo" class="w-16 h-8 object-contain bg-[#ffc700]">
-      </a>
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img src="images/zeal.png" alt="ZEAL Logo" class="w-16 h-8 object-contain bg-[#ffc700]">
+    </a>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <li class="hover:opacity-80 cursor-pointer">HOME ▾</li>
-        <li class="hover:opacity-80 cursor-pointer">LISTING ▾</li>
-        <li class="hover:opacity-80 cursor-pointer">PROPERTY ▾</li>
-        <li class="hover:opacity-80 cursor-pointer">PAGES ▾</li>
-        <li class="flex items-center gap-2 cursor-pointer">
-          ELEMENTOR
-          <span class="bg-[#ffc700] text-xs px-2 py-0.5 rounded">NEW</span>
-        </li>
-        <li class="hover:opacity-80 cursor-pointer">SEARCHES ▾</li>
-      </ul>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <li class="relative group cursor-pointer">
+        HOME ▾
+        <!-- Desktop Dropdown -->
+        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px]">
+          <li class="px-4 py-2 hover:bg-gray-100">Submenu 1</li>
+          <li class="px-4 py-2 hover:bg-gray-100">Submenu 2</li>
+        </ul>
+      </li>
+      <li class="relative group cursor-pointer">
+        LISTING ▾
+        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px]">
+          <li class="px-4 py-2 hover:bg-gray-100">Submenu A</li>
+          <li class="px-4 py-2 hover:bg-gray-100">Submenu B</li>
+        </ul>
+      </li>
+      <li class="hover:opacity-80 cursor-pointer">PROPERTY ▾</li>
+      <li class="hover:opacity-80 cursor-pointer">PAGES ▾</li>
+      <li class="flex items-center gap-2 cursor-pointer">
+        ELEMENTOR
+        <span class="bg-[#ffc700] text-xs px-2 py-0.5 rounded">NEW</span>
+      </li>
+      <li class="hover:opacity-80 cursor-pointer">SEARCHES ▾</li>
+    </ul>
 
-      <!-- Right side -->
-      <div class="flex items-center gap-4">
+    <!-- Right side -->
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc700] bg-white">
+        👤
+      </div>
+      <button class="hidden md:block border border-[#ffc700] px-4 py-2 rounded-md text-sm hover:bg-[#ffc700] hover:text-slate-600 transition">
+        CREATE A LISTING
+      </button>
 
-        <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc700] bg-white">
-          👤
-        </div>
-
-        <button class="hidden md:block border border-[#ffc700] px-4 py-2 rounded-md text-sm hover:bg-[#ffc700] hover:text-slate-600 transition">
-          CREATE A LISTING
-        </button>
-
-        <!-- Mobile Toggle -->
-        <div class="md:hidden">
-          <input type="checkbox" id="menu-toggle" class="hidden peer">
-          <label for="menu-toggle" class="text-2xl cursor-pointer">
-            ☰
-          </label>
-        </div>
+      <!-- Mobile Toggle -->
+      <div class="md:hidden">
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="text-2xl cursor-pointer">☰</label>
       </div>
     </div>
+  </div>
 
-    <!-- Mobile Dropdown -->
-    <div class="md:hidden hidden peer-checked:block bg-white text-gray-800 px-6 py-4 space-y-3 shadow-lg">
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">Home</a>
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">Listing</a>
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">Property</a>
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">Pages</a>
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">
-        Elementor <span class="ml-2 text-xs bg-green-500 text-white px-2 py-0.5 rounded">NEW</span>
-      </a>
-      <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">Searches</a>
+  <!-- Mobile Dropdown -->
+  <div class="md:hidden hidden peer-checked:block bg-white text-gray-800 px-6 py-4 space-y-2 shadow-lg">
+    <!-- HOME Mobile Dropdown -->
+    <div class="flex flex-col">
+      <input type="checkbox" id="home-toggle" class="hidden peer">
+      <label for="home-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
+        HOME ▾
+        <span class="peer-checked:rotate-180 transition-transform">▾</span>
+      </label>
+      <ul class="hidden peer-checked:flex flex-col bg-green-50 rounded-md mt-1">
+        <li class="px-4 py-2 hover:bg-green-100">Submenu 1</li>
+        <li class="px-4 py-2 hover:bg-green-100">Submenu 2</li>
+      </ul>
     </div>
-  </nav>
+
+    <!-- LISTING Mobile Dropdown -->
+    <div class="flex flex-col">
+      <input type="checkbox" id="listing-toggle" class="hidden peer">
+      <label for="listing-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
+        LISTING ▾
+        <span class="peer-checked:rotate-180 transition-transform">▾</span>
+      </label>
+      <ul class="hidden peer-checked:flex flex-col bg-green-50 rounded-md mt-1">
+        <li class="px-4 py-2 hover:bg-green-100">Submenu A</li>
+        <li class="px-4 py-2 hover:bg-green-100">Submenu B</li>
+      </ul>
+    </div>
+
+    <!-- Other items -->
+    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PROPERTY</a>
+    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PAGES</a>
+    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">
+      ELEMENTOR <span class="ml-2 text-xs bg-green-500 text-white px-2 py-0.5 rounded">NEW</span>
+    </a>
+    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">SEARCHES</a>
+  </div>
+</nav>
   <section class="bg-gray-50">
     <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
 
