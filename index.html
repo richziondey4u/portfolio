@@ -1,150 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>zeal portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Dev Portfolio</title>
+
 </head>
-<body class="bg-white">
 
-<!-- Navbar -->
-<nav class="bg-[#070202] text-white relative">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<body class="bg-gradient-to-br from-black via-gray-900 to-orange-900 text-white">
 
-    <!-- Logo -->
-    <a href="/" class="flex items-center">
-      <img src="images/zeal.png" alt="ZEAL Logo" class="w-16 h-8 object-contain bg-[#ffc700]">
-    </a>
+<!-- NAVBAR -->
+<header class="flex justify-between items-center px-6 md:px-16 py-6">
+  <div>
+    <img src="images/zeal.png" alt="" class="text-xl md:text-2xl font-bold text-orange-500 w-16 h-8 object-contain bg-orange-500">
+  </div>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <!-- HOME -->
-      <li class="relative group cursor-pointer">
-        HOME ▾
-        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
-          <li class="px-4 py-2 hover:bg-gray-100">Submenu 1</li>
-          <li class="px-4 py-2 hover:bg-gray-100">Submenu 2</li>
-        </ul>
-      </li>
-      <!-- LISTING -->
-      <li class="relative group cursor-pointer">
-        LISTING ▾
-        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
-          <li class="px-4 py-2 hover:bg-gray-100">Submenu A</li>
-          <li class="px-4 py-2 hover:bg-gray-100">Submenu B</li>
-        </ul>
-      </li>
-      <!-- SERVICES -->
-      <li class="relative group cursor-pointer">
-        SERVICES ▾
-        <ul class="absolute left-0 top-full mt-2 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-lg min-w-[150px] z-10">
-          <li class="px-4 py-2 hover:bg-gray-100">Service 1</li>
-          <li class="px-4 py-2 hover:bg-gray-100">Service 2</li>
-          <li class="px-4 py-2 hover:bg-gray-100">Service 3</li>
-        </ul>
-      </li>
-      <!-- Other Links -->
-      <li class="hover:opacity-80 cursor-pointer">PROPERTY ▾</li>
-      <li class="hover:opacity-80 cursor-pointer">PAGES ▾</li>
-      <li class="flex items-center gap-2 cursor-pointer">
-        ELEMENTOR <span class="bg-[#ffc700] text-xs px-2 py-0.5 rounded">NEW</span>
-      </li>
-      <li class="hover:opacity-80 cursor-pointer">SEARCHES ▾</li>
-    </ul>
+  <!-- MENU TOGGLE -->
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-    <!-- Right Side -->
-    <div class="flex items-center gap-4">
-      <div class="hidden md:flex items-center justify-center w-9 h-9 rounded-full border border-[#ffc700] bg-white">👤</div>
-      <button class="hidden md:block border border-[#ffc700] px-4 py-2 rounded-md text-sm hover:bg-[#ffc700] hover:text-slate-600 transition">
-        CREATE A LISTING
+  <label for="menu-toggle" class="md:hidden text-3xl cursor-pointer">
+    ☰
+  </label>
+
+  <!-- NAV LINKS -->
+  <nav class="hidden peer-checked:block absolute top-20 left-0 w-full bg-black p-6 md:static md:flex md:w-auto md:bg-transparent md:p-0 md:space-x-8">
+
+    <a href="#" class="block py-2 hover:text-orange-400">Services</a>
+    <a href="#" class="block py-2 hover:text-orange-400">About Me</a>
+    <a href="#" class="block py-2 hover:text-orange-400">Skills</a>
+    <a href="#" class="block py-2 hover:text-orange-400">Projects</a>
+    <a href="#" class="block py-2 hover:text-orange-400">Contact</a>
+
+  </nav>
+
+  <button class="hidden md:block bg-orange-500 px-5 py-2 rounded-full hover:bg-orange-600">
+    Let’s Talk
+  </button>
+
+</header>
+
+
+<!-- HERO -->
+<section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 gap-10">
+
+  <!-- TEXT -->
+  <div class="md:w-1/2 space-y-6">
+
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+      Hi, I'm <span class="text-orange-500">Zion👋</span>
+    </h1>
+
+    <p class="text-gray-300 max-w-lg">
+     I craft digital solutions that combine cutting-edge technology with beautiful design. Let's turn your ideas into reality
+    </p>
+
+    <div class="flex gap-4">
+      <button class="bg-orange-500 px-6 py-3 rounded-lg hover:bg-orange-600">
+        Contact Me
       </button>
 
-      <!-- Mobile Menu Toggle -->
-      <div class="md:hidden">
-        <input type="checkbox" id="menu-toggle" class="hidden peer">
-        <label for="menu-toggle" class="text-2xl cursor-pointer select-none">☰</label>
-      </div>
+      <button class="border border-orange-500 px-6 py-3 rounded-lg hover:bg-orange-500">
+        Download CV
+      </button>
+    </div>
+
+    <!-- STATS -->
+    <div class="flex gap-8 text-orange-400 pt-4">
+      <span><b>10+</b> Projects</span>
+      <span><b>3+</b> Years</span>
+      <span><b>10+</b> Clients</span>
+    </div>
+
+  </div>
+
+  <!-- IMAGE -->
+  <div class="md:w-1/2 flex justify-center">
+    <div class="bg-orange-500 p-2 rounded-[40px]">
+      <img src="images/mypic.jpeg"
+           class="w-72 h-80 object-cover rounded-[30px]">
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div class="md:hidden hidden peer-checked:block bg-white text-gray-800 px-6 py-4 space-y-2 shadow-lg">
-
-    <!-- Reusable Mobile Dropdown -->
-    <div class="flex flex-col">
-      <input type="checkbox" id="mobile-home-toggle" class="hidden peer">
-      <label for="mobile-home-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
-        HOME ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
-      </label>
-      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
-        <li class="px-4 py-2 hover:bg-green-100">Submenu 1</li>
-        <li class="px-4 py-2 hover:bg-green-100">Submenu 2</li>
-      </ul>
-    </div>
-
-    <div class="flex flex-col">
-      <input type="checkbox" id="mobile-listing-toggle" class="hidden peer">
-      <label for="mobile-listing-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
-        LISTING ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
-      </label>
-      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
-        <li class="px-4 py-2 hover:bg-green-100">Submenu A</li>
-        <li class="px-4 py-2 hover:bg-green-100">Submenu B</li>
-      </ul>
-    </div>
-
-    <div class="flex flex-col">
-      <input type="checkbox" id="mobile-services-toggle" class="hidden peer">
-      <label for="mobile-services-toggle" class="flex justify-between items-center px-4 py-2 rounded-md bg-green-50 text-green-700 cursor-pointer hover:bg-green-100">
-        SERVICES ▾ <span class="peer-checked:rotate-180 transition-transform">▾</span>
-      </label>
-      <ul class="hidden peer-checked:flex flex-col bg-green-50 mt-1 rounded-md">
-        <li class="px-4 py-2 hover:bg-green-100">Service 1</li>
-        <li class="px-4 py-2 hover:bg-green-100">Service 2</li>
-        <li class="px-4 py-2 hover:bg-green-100">Service 3</li>
-      </ul>
-    </div>
-
-    <!-- Other Mobile Links -->
-    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PROPERTY</a>
-    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">PAGES</a>
-    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">
-      ELEMENTOR <span class="ml-2 text-xs bg-green-500 text-white px-2 py-0.5 rounded">NEW</span>
-    </a>
-    <a href="#" class="block px-4 py-2 rounded-md bg-green-50 text-green-700 hover:bg-green-100">SEARCHES</a>
-
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center gap-10">
-
-    <!-- LEFT (TEXT) -->
-    <div class="flex-1 text-center md:text-left mt-0">
-      <p class="text-[#ffc700] font-medium mb-3 text-2xl">Welcome To Zeal Homes</p>
-      <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-4 max-w-xl mx-auto md:mx-0">
-        Packed with new features and improvements
-      </h1>
-      <p class="text-gray-500 mb-6 text-2xl">
-        It is the biggest all-in-one solution for real estate companies and professionals
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-        <button class="bg-[#ffc700] text-white px-6 py-3 rounded-md hover:bg-[#fae69c] transition w-full sm:w-auto">
-          Join Us
-        </button>
-        <button class="border border-[#070202] text-[#ffc700] px-6 py-3 rounded-md hover:bg-[#fae69c] transition w-full sm:w-auto">
-          Learn More
-        </button>
-      </div>
-    </div>
-
-    <!-- RIGHT (IMAGE) -->
-    <div class="flex-1 flex justify-center md:justify-end">
-      <img src="images/banner.png" alt="Hero Image" class="w-full max-w-md md:max-w-lg object-contain">
-    </div>
-  </div>
 </section>
+
+
+<!-- SERVICES -->
+<section class="px-6 md:px-16 py-16 text-center">
+
+  <h2 class="text-3xl font-bold mb-2">
+    My <span class="text-orange-500">Services</span>
+  </h2>
+
+  <p class="text-gray-400 mb-10">
+    Comprehensive digital solutions tailored to your needs
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <!-- CARD -->
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">Web Development</h3>
+      <p class="text-gray-400">Modern high-performance websites</p>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">Technical Writing</h3>
+      <p class="text-gray-400">Clear documentation</p>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">Mobile Development</h3>
+      <p class="text-gray-400">Cross-platform apps</p>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">Email Marketing</h3>
+      <p class="text-gray-400">Audience engagement</p>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">UI/UX Design</h3>
+      <p class="text-gray-400">Beautiful user experiences</p>
+    </div>
+
+    <div class="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 hover:border-orange-500">
+      <h3 class="text-orange-400 font-bold mb-2">Web Design</h3>
+      <p class="text-gray-400">Modern visual layouts</p>
+    </div>
+
+  </div>
+
+  <div class="mt-10 flex justify-center gap-4">
+    <button class="bg-orange-500 px-6 py-2 rounded-lg">View all Projects</button>
+    <button class="border border-orange-500 px-6 py-2 rounded-lg">Get in Touch</button>
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="px-6 md:px-16 py-16 flex flex-col md:flex-row items-center gap-10">
+
+  <!-- IMAGE GRID -->
+<div class="grid grid-cols-2 gap-4 md:w-1/2">
+
+  <div class="h-40 overflow-hidden rounded-xl border-2 border-orange-500">
+    <img src="images/ab3.jpeg" class="w-full h-full object-cover">
+  </div>
+
+  <div class="h-40 overflow-hidden rounded-xl border-2 border-orange-500">
+    <img src="images/ab1.jpeg" class="w-full h-full object-cover">
+  </div>
+
+  <div class="h-40 overflow-hidden rounded-xl border-2 border-orange-500">
+    <img src="images/ab2.jpeg" class="w-full h-full object-cover">
+  </div>
+
+  <div class="h-40 overflow-hidden rounded-xl border-2 border-orange-500">
+    <img src="images/ab4.jpeg" class="w-full h-full object-cover">
+  </div>
+
+</div>
+
+  <!-- TEXT -->
+  <div class="md:w-1/2">
+
+  <h2 class="text-3xl font-bold mb-4">
+    About <span class="text-orange-500">Me</span>
+  </h2>
+
+  <h3 class="text-lg font-semibold text-orange-400 mb-2">
+    Full-Stack Developer & UI/UX Designer
+  </h3>
+
+  <p class="text-gray-400 mb-6 leading-relaxed">
+    I create digital experiences that combine innovative technology with elegant design. 
+    With expertise in both frontend and backend development, I deliver solutions that are 
+    visually appealing, highly functional, and user-friendly.
+  </p>
+
+  <!-- SKILLS -->
+  <div class="grid grid-cols-2 gap-4 text-sm text-gray-300 mb-6">
+
+    <div>
+      <h4 class="text-orange-400 font-semibold">Frontend</h4>
+      <p>HTML, CSS, JavaScript, Tailwind CSS</p>
+    </div>
+
+    <div>
+      <h4 class="text-orange-400 font-semibold">Backend</h4>
+      <p>Node.js, REST APIs</p>
+    </div>
+
+    <div>
+      <h4 class="text-orange-400 font-semibold">Design</h4>
+      <p>UI/UX, Figma, Prototyping</p>
+    </div>
+
+    <div>
+      <h4 class="text-orange-400 font-semibold">Tools</h4>
+      <p>Git, GitHub, VS Code</p>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="flex gap-6 text-orange-400 mb-6">
+    <span><b>1+</b> Years Experience</span>
+    <span><b>10+</b> Projects</span>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="flex gap-4">
+    <button class="bg-orange-500 px-5 py-2 rounded hover:bg-orange-600">
+      View Portfolio
+    </button>
+    <button class="border border-orange-500 px-5 py-2 rounded hover:bg-orange-500">
+      Contact Me
+    </button>
+  </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-6 border-t border-white/10">
+  <p class="text-gray-400">© 2026 Richziondey4u</p>
+</footer>
+
 </body>
 </html>
